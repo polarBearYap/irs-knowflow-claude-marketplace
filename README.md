@@ -12,6 +12,10 @@ The marketplace contains the `irs-knowflow` plugin. Installing it:
 
 You do not need to run `claude mcp add`. Authentication is still completed once by each employee because NocoBase access is user-specific.
 
+The plugin supplies its public OAuth client ID automatically. Claude Code uses the
+pre-registered callback `http://localhost:49152/callback`, so employees do not enter
+OAuth Advanced Settings or a client secret.
+
 ## Prerequisites
 
 - Claude Code installed and available as `claude`.
@@ -139,6 +143,7 @@ Run `/mcp`, select `plugin:irs-knowflow:irs-knowflow`, and complete the browser 
 ### OAuth callback fails
 
 - Keep the initiating Claude Code session open.
+- Confirm local TCP port `49152` is available for Claude Code's OAuth callback.
 - Confirm the MCP endpoint and browser login are reachable.
 - Retry authentication from `/mcp`.
 - If the callback is blocked by a proxy, VPN, firewall, or browser policy, contact the IRS KnowFlow administrator with the time of the failure. Do not share tokens.
