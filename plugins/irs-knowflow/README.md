@@ -28,6 +28,10 @@ https://irs-knowflow-ai.jhengkhinyap.dev/mcp
 
 Claude Code registers it as `plugin:irs-knowflow:irs-knowflow` when the plugin is enabled. No separate `claude mcp add` command is required.
 
+The plugin includes its public OAuth client ID and fixed
+`http://localhost:49152/callback` redirect. Employees do not enter OAuth Advanced
+Settings or a client secret.
+
 Each employee must authenticate once:
 
 1. Start Claude Code.
@@ -46,4 +50,5 @@ The plugin uses the permissions of the authenticated NocoBase employee. Installa
 - If the skill is unavailable, enable `irs-knowflow@irs-knowflow` and run `/reload-plugins`.
 - If the MCP server requires authentication, repeat the `/mcp` login flow.
 - If OAuth callback handling fails, keep Claude Code open, check browser/network policy, and retry from `/mcp`.
+- Ensure local TCP port `49152` is available while completing OAuth.
 - If both `irs-knowflow` and `plugin:irs-knowflow:irs-knowflow` appear in `/mcp`, remove the standalone duplicate with `claude mcp remove irs-knowflow`. Keep the plugin-scoped server.

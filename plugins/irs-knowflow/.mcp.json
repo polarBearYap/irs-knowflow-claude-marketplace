@@ -2,7 +2,11 @@
   "mcpServers": {
     "irs-knowflow": {
       "type": "http",
-      "url": "https://irs-knowflow-ai.jhengkhinyap.dev/mcp"
+      "url": "https://irs-knowflow-ai.jhengkhinyap.dev/mcp",
+      "oauth": {
+        "clientId": "irs-knowflow-claude-hosted",
+        "callbackPort": 49152
+      }
     }
   }
 }
