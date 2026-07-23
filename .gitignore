@@ -1,0 +1,43 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+credentials.json
+*.credentials.json
+tokens.json
+*.tokens.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local Claude configuration and generated plugin state
+.claude.json
+.claude/settings.local.json
+.claude/.credentials.json
+.claude/plugins/
+**/.claude-plugin/cache/
+
+# Dependencies and build/cache output
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+
+# Archives, logs, and temporary files
+*.zip
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# IDE-local files
+.idea/
+.vscode/
+*.code-workspace

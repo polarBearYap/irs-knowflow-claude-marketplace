@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "irs-knowflow": {
+      "type": "http",
+      "url": "https://irs-knowflow-ai.jhengkhinyap.dev/mcp"
+    }
+  }
+}

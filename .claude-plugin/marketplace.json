@@ -1,0 +1,15 @@
+{
+  "name": "irs-knowflow",
+  "description": "IRS KnowFlow Claude Code plugins",
+  "owner": {
+    "name": "IRS KnowFlow"
+  },
+  "plugins": [
+    {
+      "name": "irs-knowflow",
+      "source": "./plugins/irs-knowflow",
+      "description": "Search approved company knowledge and contribute governed drafts through NocoBase OAuth.",
+      "version": "0.1.0"
+    }
+  ]
+}
