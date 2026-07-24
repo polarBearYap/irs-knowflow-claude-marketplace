@@ -9,7 +9,7 @@
       "name": "irs-knowflow",
       "source": "./plugins/irs-knowflow",
       "description": "Search approved company knowledge and contribute governed drafts through NocoBase OAuth.",
-      "version": "0.1.1"
+      "version": "0.1.2"
     }
   ]
 }
