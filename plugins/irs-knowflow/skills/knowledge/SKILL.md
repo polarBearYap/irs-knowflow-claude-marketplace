@@ -9,7 +9,13 @@ argument-hint: "ask <question> | contribute <finding>"
 
 Treat `$ARGUMENTS` as the employee's requested operation. Use only the MCP server named `irs-knowflow`; do not run local scripts, call NocoBase directly, or request credentials in chat.
 
-For a search, call `ask_company_knowledge` once. Present its answer and references. If it returns `not_found`, say so without inventing an answer.
+For a search, call `ask_company_knowledge` once. Unless the employee explicitly asked for a different format, present an `answered` result exactly as:
+
+- the answer text, then
+- a `Sources:` line listing each reference as `knowledgeNo — title`, comma-separated, then
+- an `Evidence:` line listing evidence labels, comma-separated (omit this line when there is no evidence).
+
+Never show raw JSON, the `status` field, or internal database IDs (`knowledgeId`/`versionId`). If it returns `not_found`, say so without inventing an answer.
 
 For a contribution, treat the operation as a live write:
 
