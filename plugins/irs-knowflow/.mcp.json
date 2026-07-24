@@ -5,7 +5,12 @@
       "url": "https://irs-knowflow-ai.jhengkhinyap.dev/mcp",
       "oauth": {
         "clientId": "irs-knowflow-claude-hosted",
-        "callbackPort": 49152
+        "callbackPort": 49152,
+        "scopes": [
+          "knowflow:read",
+          "knowflow:contribute",
+          "offline_access"
+        ]
       }
     }
   }
