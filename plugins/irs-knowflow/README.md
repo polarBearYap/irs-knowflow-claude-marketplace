@@ -1,6 +1,6 @@
 # IRS KnowFlow plugin
 
-The `irs-knowflow` Claude Code plugin lets authorized employees search approved company knowledge and prepare governed knowledge drafts in NocoBase.
+The `irs-knowflow` Claude Code plugin lets authorized employees search approved company knowledge, retrieve code-review guideline fields, and prepare governed general-knowledge or code-review drafts in NocoBase.
 
 ## Skill
 
@@ -16,7 +16,9 @@ Contribute a finding:
 /irs-knowflow:knowledge contribute <finding>
 ```
 
-Searches use approved knowledge and report available references. Contributions are live writes: the skill presents the full submission and requires explicit confirmation before creating a draft. NocoBase review and publication are still required.
+Searches use approved knowledge and report available references. Code-review results can include purpose, scope, target repository, priority, instruction, rationale, exceptions, and safe path.
+
+Contributions are live writes: the skill presents the full submission and requires explicit confirmation before creating a draft. Every draft requires `finding` and `suggestedDepartmentIds`. A `CODE_REVIEW_GUIDELINE` draft additionally requires `reviewScope`, `reviewInstruction`, and `targetRepositoryKey`; rationale, exceptions, safe path, and priority are optional. NocoBase review and publication are still required.
 
 ## MCP server and authentication
 

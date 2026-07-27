@@ -8,8 +8,8 @@
     {
       "name": "irs-knowflow",
       "source": "./plugins/irs-knowflow",
-      "description": "Search approved company knowledge and contribute governed drafts through NocoBase OAuth.",
-      "version": "0.1.3"
+      "description": "Search approved knowledge, retrieve code-review fields, and contribute governed general or code-review drafts through NocoBase OAuth.",
+      "version": "0.1.4"
     }
   ]
 }

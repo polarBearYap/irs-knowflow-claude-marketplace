@@ -1,6 +1,6 @@
 # IRS KnowFlow Claude Code Marketplace
 
-This repository is the production Claude Code plugin marketplace for IRS KnowFlow. IRS KnowFlow gives authorized employees OAuth-authenticated access to approved company knowledge and a governed path for contributing knowledge drafts to NocoBase.
+This repository is the production Claude Code plugin marketplace for IRS KnowFlow. IRS KnowFlow gives authorized employees OAuth-authenticated access to approved company knowledge, including code-review guideline fields, and a governed path for contributing general-knowledge or code-review drafts to NocoBase.
 
 ## What this marketplace installs
 
@@ -88,7 +88,10 @@ The same skill can prepare a governed contribution:
 /irs-knowflow:knowledge contribute <finding>
 ```
 
-Contributions require a complete preview and explicit confirmation immediately before the write. They remain drafts until reviewed and published in NocoBase.
+For code-review sources, search results can include purpose, scope, target repository,
+priority, instruction, rationale, exceptions, and safe path.
+
+Contributions require a complete preview and explicit confirmation immediately before the write. Every draft requires `finding` and `suggestedDepartmentIds`. A `CODE_REVIEW_GUIDELINE` draft additionally requires `reviewScope`, `reviewInstruction`, and `targetRepositoryKey`; rationale, exceptions, safe path, and priority are optional. Drafts remain unpublished until reviewed and published in NocoBase.
 
 ## Update
 

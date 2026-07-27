@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "irs-knowflow",
   "displayName": "IRS KnowFlow",
-  "version": "0.1.3",
-  "description": "OAuth-authenticated access to approved IRS KnowFlow company knowledge and governed NocoBase draft contribution.",
+  "version": "0.1.4",
+  "description": "OAuth-authenticated access to approved knowledge, code-review guideline fields, and governed NocoBase draft contribution.",
   "author": {
     "name": "IRS KnowFlow"
   },
@@ -11,6 +11,7 @@
     "knowledge",
     "nocobase",
     "mcp",
-    "oauth"
+    "oauth",
+    "code-review"
   ]
 }
