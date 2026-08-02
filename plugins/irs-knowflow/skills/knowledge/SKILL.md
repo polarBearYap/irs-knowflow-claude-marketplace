@@ -24,7 +24,7 @@ For a contribution, treat the operation as a live write:
 
 Use this draft field template:
 
-- Always required: `finding`, `suggestedDepartmentIds`.
+- Always required: `finding`, `preferredDepartment` as a human-readable name such as `R&D`.
 - Optional context: `sourceQuestion`, `sourceAnswer`, `evidenceReferences`.
 - `knowledgePurpose` defaults to `GENERAL_KNOWLEDGE`; do not attach review fields to it.
 - `CODE_REVIEW_GUIDELINE` additionally requires `reviewScope`, `reviewInstruction`, and `targetRepositoryKey`.
@@ -32,13 +32,15 @@ Use this draft field template:
 - Valid scopes: `ROOT_GENERAL`, `SQL_SERVER`, `CSHARP`, `DEVEXPRESS_WEBFORMS`, `ACCOUNTING_DOMAIN`, and `SECURITY`.
 
 The backend derives title, summary, and content from `finding`. Do not invent facts,
-exceptions, evidence, repository keys, or approval state.
+exceptions, evidence, repository keys, department names, or approval state.
 
 1. Collect and structure the fields above.
-2. Show every populated field.
-3. Obtain explicit confirmation immediately before the write.
-4. Call `contribute_knowledge` exactly once.
-5. Return the created `knowledgeId`, `versionId`, `knowledgePurpose`, and draft status. State that NocoBase review and publication are still required.
+2. Use a department name supplied by the employee or already established in the conversation. Never ask for or display an internal department ID.
+3. If no department is established, call `list_my_departments`. Use its sole result when there is one; otherwise ask the employee to choose from the returned names.
+4. Show every populated field, including `preferredDepartment`.
+5. Obtain explicit confirmation immediately before the write.
+6. Call `contribute_knowledge` exactly once.
+7. Return the created `knowledgeId`, `versionId`, `knowledgePurpose`, and draft status. State that NocoBase review and publication are still required.
 
 Never retry an ambiguous contribution automatically.
 

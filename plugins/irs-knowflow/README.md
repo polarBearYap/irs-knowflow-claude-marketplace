@@ -18,7 +18,7 @@ Contribute a finding:
 
 Searches use approved knowledge and report available references. Code-review results can include purpose, scope, target repository, priority, instruction, rationale, exceptions, and safe path.
 
-Contributions are live writes: the skill presents the full submission and requires explicit confirmation before creating a draft. Every draft requires `finding` and `suggestedDepartmentIds`. A `CODE_REVIEW_GUIDELINE` draft additionally requires `reviewScope`, `reviewInstruction`, and `targetRepositoryKey`; rationale, exceptions, safe path, and priority are optional. NocoBase review and publication are still required.
+Contributions are live writes: the skill presents the full submission and requires explicit confirmation before creating a draft. Every draft requires `finding` and a human-readable `preferredDepartment`, such as `R&D`. The plugin can list the employee's permitted department names when no department has been established; it never asks the employee for an internal ID. A `CODE_REVIEW_GUIDELINE` draft additionally requires `reviewScope`, `reviewInstruction`, and `targetRepositoryKey`; rationale, exceptions, safe path, and priority are optional. NocoBase review and publication are still required.
 
 ## MCP server and authentication
 

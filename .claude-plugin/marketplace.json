@@ -9,7 +9,7 @@
       "name": "irs-knowflow",
       "source": "./plugins/irs-knowflow",
       "description": "Search approved knowledge, retrieve code-review fields, and contribute governed general or code-review drafts through NocoBase OAuth.",
-      "version": "0.1.4"
+      "version": "0.1.5"
     }
   ]
 }
