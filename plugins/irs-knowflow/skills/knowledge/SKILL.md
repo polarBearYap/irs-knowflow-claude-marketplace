@@ -35,11 +35,11 @@ The backend derives title, summary, and content from `finding`. Do not invent fa
 exceptions, evidence, repository keys, department names, or approval state.
 
 1. Collect and structure the fields above.
-2. Use a department name supplied by the employee or already established in the conversation. Never ask for or display an internal department ID.
-3. If no department is established, call `list_my_departments`. Use its sole result when there is one; otherwise ask the employee to choose from the returned names.
-4. Show every populated field, including `preferredDepartment`.
-5. Obtain explicit confirmation immediately before the write.
-6. Call `contribute_knowledge` exactly once.
+2. Resolve the department before the preview. Use a name supplied by the employee or already established in the conversation. Otherwise call `list_my_departments`; automatically select its sole result, or ask the employee to choose only when multiple names are returned. Never ask for or display an internal department ID.
+3. For `CODE_REVIEW_GUIDELINE`, resolve the repository before the preview. Use an option already established in the conversation. Otherwise call `list_code_review_repositories`; automatically select its sole result, or ask the employee to choose only when multiple repositories are returned. Never ask the employee to invent or look up a repository key.
+4. Show every populated field, including `preferredDepartment`. State plainly that the knowledge will go to the selected department and, for a code-review guideline, the selected repository and key.
+5. Make this complete destination-aware preview the single final confirmation request.
+6. After explicit confirmation, call `contribute_knowledge` exactly once.
 7. Return the created `knowledgeId`, `versionId`, `knowledgePurpose`, and draft status. State that NocoBase review and publication are still required.
 
 Never retry an ambiguous contribution automatically.

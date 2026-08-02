@@ -91,7 +91,7 @@ The same skill can prepare a governed contribution:
 For code-review sources, search results can include purpose, scope, target repository,
 priority, instruction, rationale, exceptions, and safe path.
 
-Contributions require a complete preview and explicit confirmation immediately before the write. Every draft requires `finding` and a human-readable `preferredDepartment`, such as `R&D`. If the employee has not named a department, the plugin can list permitted department names without exposing internal IDs. A `CODE_REVIEW_GUIDELINE` draft additionally requires `reviewScope`, `reviewInstruction`, and `targetRepositoryKey`; rationale, exceptions, safe path, and priority are optional. Drafts remain unpublished until reviewed and published in NocoBase.
+Contributions require a complete preview and explicit confirmation immediately before the write. Every draft requires `finding` and a human-readable `preferredDepartment`, such as `R&D`. The plugin discovers permitted departments and configured code-review repositories, automatically selects a sole option, and asks the employee to choose only when multiple options exist. The final confirmation states the selected department and repository. A `CODE_REVIEW_GUIDELINE` draft additionally requires `reviewScope`, `reviewInstruction`, and `targetRepositoryKey`; rationale, exceptions, safe path, and priority are optional. Drafts remain unpublished until reviewed and published in NocoBase.
 
 ## Update
 
